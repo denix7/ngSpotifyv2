@@ -8,13 +8,15 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 import {AppRoutingModule} from './app.routes';
+import { FeaturesComponent } from './components/features/features.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
