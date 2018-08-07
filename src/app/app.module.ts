@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 import {AppRoutingModule} from './app.routes';
 import { FeaturesComponent } from './components/features/features.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FeaturesComponent } from './components/features/features.component';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
