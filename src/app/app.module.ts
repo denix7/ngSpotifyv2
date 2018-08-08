@@ -16,6 +16,7 @@ import {AppRoutingModule} from './app.routes';
 import { FeaturesComponent } from './components/features/features.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { SinfotoPipe } from './pipes/sinfoto.pipe';
+import { ArtistComponent } from './components/artist/artist.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SinfotoPipe } from './pipes/sinfoto.pipe';
     NavbarComponent,
     FeaturesComponent,
     FooterComponent,
-    SinfotoPipe
+    SinfotoPipe,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
