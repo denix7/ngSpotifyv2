@@ -12,3 +12,7 @@ body{
 .footer{
     color: white;
 }
+
+img.puntero:hover {
+    cursor: pointer;    
+}

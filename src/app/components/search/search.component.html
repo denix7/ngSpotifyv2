@@ -9,9 +9,14 @@
       <h1>{{termino}}</h1>
       <hr>
 
-      <ul>
-        <li *ngFor="let artist of _spotify.artistas">{{artist.name}}</li>
-      </ul>
+      
+      
+      <div class="row">
+        <div class="col-md-3 text-center" *ngFor="let artista of _spotify.artistas">
+          <img [src]="artista.images | sinfoto" alt="" class="img-thumbnail puntero">
+          <p>{{artista.name}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
