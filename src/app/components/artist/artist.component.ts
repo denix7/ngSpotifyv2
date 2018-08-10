@@ -24,7 +24,13 @@ export class ArtistComponent implements OnInit {
                           .subscribe(artista => {
                             console.log(artista);
                             this.artista = artista;
-                          })
+                          });
+
+            this._spotify.getTop(id)
+                          .map((res:any) => res.tracks)
+                          .subscribe(top => {
+                            console.log(top)
+                          });              
           })
   }
 
