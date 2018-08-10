@@ -16,3 +16,7 @@ body{
 img.puntero:hover {
     cursor: pointer;    
 }
+
+.img-70 {
+    width: 70px;
+}
