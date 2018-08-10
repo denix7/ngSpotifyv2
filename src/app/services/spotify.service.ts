@@ -7,16 +7,35 @@ export class SpotifyService {
 
   artistas: any[] = [];
 
+  urlSpotify: string = 'https://api.spotify.com/v1/';
+
+  token: string = 'BQAH-o7Or27VTviol39JXhmiWViiwlR6qeRxR-m9-sn6G2e8Wrt7SgyswhxHXMJSCw8QSAVB8k3kJ4XEVI4';
+
   constructor(public http: HttpClient) { 
     console.log('Servicio spotify ready!');
   }
 
-  getArtistas(termino: string){
-    let url = `https://api.spotify.com/v1/search?query=${termino}&type=artist&limit=20`;
-    
+  private getHeaders(): HttpHeaders{
     let headers = new HttpHeaders({
-      'authorization': 'Bearer BQCeljOL8P_qT7pqkk5_4cs6L0cBsne_blHv0kUDi2ECWbf4vbPFM-o533i54CW96x_kUZPMJ_IfNUAbF9o' 
+      'authorization': 'Bearer ' + this.token 
     });
+
+    return headers;
+  }
+
+  getArtista(id: string){
+    let url = `${this.urlSpotify}artists/${id}`;
+    
+    let headers = this.getHeaders();
+
+    return this.http.get(url, {headers})
+
+  }
+
+  getArtistas(termino: string){
+    let url = `${this.urlSpotify}search?query=${termino}&type=artist&limit=20`;
+    
+    let headers = this.getHeaders();
 
     return this.http.get(url, {headers})
                 .map( (resp: any)=> {

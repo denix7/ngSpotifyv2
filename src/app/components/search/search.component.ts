@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit {
      
     this._spotify.getArtistas(this.termino)
     .subscribe( artistas => {
-      console.log(artistas);
+      //console.log(artistas);
     }); 
    }
 
