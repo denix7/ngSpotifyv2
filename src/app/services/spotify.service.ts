@@ -9,7 +9,7 @@ export class SpotifyService {
 
   urlSpotify: string = 'https://api.spotify.com/v1/';
 
-  token: string = 'BQBJ8yYixV-Qc_S17wHMBGG0a6vyHx3gqRDdtxWnsyAo8LusvBEydYryKiZp9-sxVnLYK0JHgDodMaMIxrc';
+  token: string = 'BQAZvu9wyQRXGja3OzytrSLWQx1uYaNOfZ0ZkY5xINe5uipiOrqPN9KYWr5EKP8B0CDsCGe1kDGeebNlai0';
 
   constructor(public http: HttpClient) { 
     console.log('Servicio spotify ready!');
@@ -39,6 +39,7 @@ export class SpotifyService {
 
     return this.http.get(url, {headers})
                 .map( (resp: any)=> {
+                  console.log('res', resp)
                   this.artistas = resp.artists.items;
                   return this.artistas;
                 })
